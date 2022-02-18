@@ -1,0 +1,8 @@
+letterrc <- read.csv("/Users/leechenhsin/Desktop/Study@USA/07_UW_School/IMT574/letter-recognition.csv", header = T)
+features <- c("xbox","ybox","width","high","onpix","xbar","ybar","x2bar",
+              "y2bar","xybar","x2ybr","xy2br","xege","xegvy","yege","yegvx")
+
+View(letterrc)
+
+letterrc.pr <- prcomp(letterrc[c(2:17)], center = TRUE, scale = TRUE)
+summary(letterrc.pr)
